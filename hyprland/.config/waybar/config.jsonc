@@ -1,0 +1,76 @@
+{
+  "layer": "top",
+  "modules-left": ["hyprland/workspaces", "hyprland/submap", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["bluetooth", "cpu", "memory", "group/networktab", "custom/power"],
+  "hyprland/window": {
+    "max-length": 50
+  },
+  "clock": {
+    "interval": 60,
+    "tooltip": true,
+    "format": "{:%d.%m.%y %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "left",
+      "iso8601": true,
+      "format": {
+        "months": "<span color='#EBEBD3'><b>{}</b></span>",
+        "days": "<span color='#EBEBD3'><b>{}</b></span>",
+        "weeks": "<span color='#DA4167'><b>{}</b></span>",
+        "weekdays": "<span color='#F4D35E'><b>{}</b></span>",
+        "today": "<span color='#F78764'><b><u>{}</u></b></span>"
+      },
+    }
+
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {num_connections}",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "cpu": {
+    "interval": 30,
+    "format": " {}%",
+    "max-length": 10,
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10,
+  },
+
+  "group/networktab": {
+    "orientation": "horizontal",
+    "modules": [
+      "tray",
+      "network"
+    ]
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout"
+  },
+  "ipc": true
+}
