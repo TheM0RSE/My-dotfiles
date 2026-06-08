@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrainsMono Nerd Font Propo;
-    font-size: 20px;
+    font-size: 16px;
     color: #EBEBD3;
 }
 
@@ -15,27 +15,38 @@ window#waybar {
   font-weight: 100;
   background: transparent;
   border-radius: 10px;
-  border: 1px solid #EBEBD3;
 }
 
 #workspaces button.active {
-  background: #083D77;
+  background: #60AA3F;
   font-weight: 900;
 }
 
-#window, #clock, #bluetooth, #networktab, #cpu, #memory, #custom-power {
+#left, #status, #custom-power {
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
-  padding: 5px 10px 5px 10px;
-  background: #083D77;
-  border: 1px solid #083D77
+  background: #0D0A0B;
 }
 
-#window:hover, #clock:hover, #bluetooth:hover, #networktab:hover, #cpu:hover, #memory:hover {
-  border: 1px solid #EBEBD3;
+#mpris, #window, #clock, #bluetooth, #cpu, #memory, #tray {
+  padding: 5px 10px 5px 10px;
+}
+
+#mpris {
+  background: #007FFF;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#window {
+  background: #007FFF;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#clock:hover, #bluetooth:hover, #networktab:hover, #cpu:hover, #memory:hover {
+  color: #007FFF;
 }
 
 tooltip {
-  background: rgba(0, 0, 0, 0.6);
-  border-color: #083D77;
+  background: rgba(0, 0, 0, 0.8);
+  border-color: #0D0A0B;
 }

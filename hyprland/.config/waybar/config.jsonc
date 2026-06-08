@@ -1,8 +1,8 @@
 {
   "layer": "top",
-  "modules-left": ["hyprland/workspaces", "hyprland/submap", "hyprland/window"],
-  "modules-center": ["clock"],
-  "modules-right": ["bluetooth", "cpu", "memory", "group/networktab", "custom/power"],
+  "modules-left": ["hyprland/workspaces", "group/left"],
+  "modules-center": [],
+  "modules-right": ["group/status"],
   "hyprland/window": {
     "max-length": 50
   },
@@ -60,17 +60,41 @@
     "spacing": 10,
   },
 
-  "group/networktab": {
-    "orientation": "horizontal",
-    "modules": [
-      "tray",
-      "network"
-    ]
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "{status_icon} {title} - {artist}",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    // "ignored-players": ["firefox"]
   },
-
   "custom/power": {
     "format": "⏻",
     "on-click": "wlogout"
+  },
+
+  "group/status": {
+    "orientation": "horizontal",
+    "modules": [
+      "mpris",
+      "bluetooth",
+      "cpu",
+      "memory",
+      "tray",
+      "custom/power"
+    ]
+  },
+
+  "group/left": {
+    "orientation": "horizontal",
+    "modules": [
+      "clock",
+      "hyprland/window",
+    ]
   },
   "ipc": true
 }

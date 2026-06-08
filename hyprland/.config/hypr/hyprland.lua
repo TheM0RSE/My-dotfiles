@@ -48,9 +48,8 @@ local menu = "hyprlauncher"
 --
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
-	hl.exec_cmd("hyprpaper & nm-applet & waybar")
+	hl.exec_cmd("hyprpaper & nm-applet & waybar & zen-browser")
 end)
-
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
