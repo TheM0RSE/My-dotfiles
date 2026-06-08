@@ -4,7 +4,7 @@
   "modules-center": [],
   "modules-right": ["group/status"],
   "hyprland/window": {
-    "max-length": 50
+    "max-length": 70
   },
   "clock": {
     "interval": 60,
