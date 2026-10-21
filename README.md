@@ -5,6 +5,8 @@ _.config/hypr/modules/monitors.lua_ to change to your monitor settings (has my s
 
 Go into _.config/hypr/modules/variables.lua_ to change to your desired applications, keyboard layout, etc.
 
-There are probably some programs you will have to download. I might add them to a script later. Who knows.
+You also have to download your own background and put place it so it looks like this: _.config/hypr/backgrounds/background.jpg_.
+
+There are probably some dependencies you will have to download manually. I might add them to a script later. Who knows.
 
 hyprland-laptop is only a dummy.

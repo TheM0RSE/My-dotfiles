@@ -4,9 +4,6 @@ require("modules.keybinds")
 
 local variables = require("modules.variables")
 local terminal = variables.terminal
-local fileManager = variables.fileManager
-local menu = variables.menu
-local browser = variables.browser
 
 -- AUTO START
 hl.on("hyprland.start", function()
