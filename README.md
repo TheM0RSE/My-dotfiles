@@ -2,12 +2,10 @@
 
 _My dotfiles for Hyprland_
 
-_.config/hypr/modules/monitors.lua_ to change to your monitor settings (has my settings, but it wont work for you most likely)
+Run _install-dependencies.sh_ to install needed/recommended dependencies, and choose to install my default programs, if you want. _If you choose to not install them, make sure to change variables.lua to your desired applications._
 
-Go into _.config/hypr/modules/variables.lua_ to change to your desired applications, keyboard layout, etc.
+hypr/modules/monitors.lua_ to change to your monitor settings.
 
-You also have to download your own background and place it in backgrounds like this: _.config/hypr/backgrounds/background.jpg_.
+Go into hypr/modules/variables.lua_ to change to your desired applications, keyboard layout, etc.
 
-There are probably some dependencies you will have to download manually. I might add them to a script later. Who knows.
-
-hyprland-laptop is only a dummy.
+I have added my own backgrounds of pictures I have taken myself. It will reload a random background in each time Hyprland launches. Backgrounds are located in _hypr/backgrounds_, so feel free to add your own backgrounds :)
