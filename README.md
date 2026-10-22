@@ -2,9 +2,9 @@
 
 _My dotfiles for Hyprland_
 
-Run _install-dependencies.sh_ to install needed/recommended dependencies, and choose to install my default programs, if you want. _If you choose to not install them, make sure to change variables.lua to your desired applications._
+Run _install-dependencies.sh_ to install needed/recommended dependencies, and choose to install my default programs, if you want. _If you choose to not install them, make sure to change modules/variables.lua to your desired applications._
 
-hypr/modules/monitors.lua_ to change to your monitor settings.
+_hypr/modules/monitors.lua_ to change to your monitor settings. (default is highest resolution and framerate on all monitors, plus each new monitor will be placed to the right).
 
 Go into hypr/modules/variables.lua_ to change to your desired applications, keyboard layout, etc.
 
