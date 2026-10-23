@@ -126,3 +126,11 @@ hl.window_rule({
 
 	no_focus = true,
 })
+
+hl.window_rule({
+	name = "floating-pavucontrol",
+	match = {
+		class = "org.pulseaudio.pavucontrol",
+	},
+	float = true,
+})

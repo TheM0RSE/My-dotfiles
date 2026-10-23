@@ -1,0 +1,62 @@
+(defwidget activate-linux []
+  (box
+    :orientation "v"
+    :halign "start"
+    :valign "start"
+    (label :xalign 0 :markup "<span font_size=\"large\">Activate Linux</span>")
+    (label :xalign 0 :text "Go to Settings to activate Linux")))
+
+(defwindow activate-linux
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :x "8px" :y "32px" :width "250px" :anchor "bottom right")
+  (activate-linux))
+
+(defvar battery_enabled false)
+(defvar memory_enabled false)
+(defvar cpu_usage_enabled false)
+
+
+(defwidget configure-waybar []
+  (box :orientation "vertical"
+    :space-evenly false
+    :spacing 10
+    :class "checkbox-container"
+    (box :class "battery"
+      (checkbox
+        :checked battery_enabled
+        :onchecked "eww update battery_enabled=true"
+        :onunchecked "eww update battery_enabled=false"
+      (label :text "Battery"))
+    )
+    (box :class "memory"
+      (checkbox
+        :checked memory_enabled
+        :onchecked "eww update memory_enabled=true"
+        :onunchecked "eww update memory_enabled=false"
+      (label :text "Memory"))
+    )
+    (box :class "cpu-usage"
+      (checkbox
+        :checked cpu_usage_enabled
+        :onchecked "eww update cpu_usage_enabled=true"
+        :onunchecked "eww update cpu_usage_enabled=false"
+      (label :text "CPU usage"))
+    )
+  )
+)
+
+(defwindow configure-waybar
+  :monitor 0
+  :geometry (geometry 
+  :x "0%"
+  :y "10px"
+  :width "70%"
+  :height "70%"
+  :anchor "top center")
+
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "dock"
+  :wm-ingore false
+  (configure-waybar))

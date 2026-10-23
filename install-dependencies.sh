@@ -2,9 +2,8 @@
 
 echo "INSTALL NEEDED/RECOMMENDED DEPENDENCIES..."
 sleep 1
-<<<<<<< Updated upstream
 sudo pacman -S --needed git base-devel
-if command -v yay >/dev/null 2>1%; then
+if command -v yay >/dev/null 2>&1; then
   echo "yay is already installed"
 else
   echo "Installing yay"
@@ -18,8 +17,8 @@ else
   echo "yay installation complete"
 fi
 
-yay -S networkmanager network-manager-applet waybar hyprpolkitagent dunst hyprpaper waypaper wl-clipboard slurp wireplumber brightnessctl playerctl wlogout
-echo "Installation of my default apps (discord, kitty, thunar, rofi, zen-browser-bin)..."
+yay -S networkmanager network-manager-applet waybar hyprpolkitagent dunst hyprpaper waypaper wl-clipboard slurp wireplumber brightnessctl playerctl wlogout pavucontrol eww
+echo "Installation of my default apps (kitty, thunar, rofi, zen-browser-bin)..."
 echo "If you do not want them, make sure to change your preferred programs in modules/variables.lua."
 printf "Do you want to install my default apps? (y/n): "
 read -r response
@@ -28,7 +27,7 @@ case "$response" in
 [Yy][Es][Ss] | [Yy])
   echo "Installing my default apps..."
   sleep 1
-  yay -S discord kitty thunar rofi zen-browser-bin
+  yay -S kitty thunar rofi zen-browser-bin
   ;;
 [Nn][Oo] | [Nn])
   echo "Installation stopped"
@@ -39,9 +38,3 @@ case "$response" in
   exit 1
   ;;
 esac
-=======
-sudo pacman -S networkmanager network-manager-applet waybar hyprpolkitagent dunst hyprpaper waypaper wl-clipboard slurp wireplumber brightnessctl playerctl wlogout
-echo "INSTALL MY DEFAULT PROGRAMS (SKIP IF YOU WANT TO INSTALL YOUR OWN DEFAULT PROGRAMS)"
-sleep 1
-sudo pacman -S discord kitty thunar rofi zen-browser
->>>>>>> Stashed changes

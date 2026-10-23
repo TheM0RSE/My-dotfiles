@@ -28,7 +28,7 @@ window#waybar {
   background: #0D0A0B;
 }
 
-#mpris, #window, #clock, #bluetooth, #cpu, #memory, #tray {
+#mpris, #window, #clock, #bluetooth, #cpu, #memory, #tray, #battery, #wireplumber {
   padding: 5px 10px 5px 10px;
 }
 

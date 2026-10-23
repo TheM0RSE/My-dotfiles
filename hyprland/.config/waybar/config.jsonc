@@ -72,6 +72,36 @@
     },
     // "ignored-players": ["firefox"]
   },
+  "battery": {
+    "interval": 3,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "events": {
+      "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+      "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-plugged": "{icon} {capacity}%",
+    "format-icons": {
+      "default": [
+        "󰂎", "󰁻", "󰁽", "󰁿", "󰂁", "󰁹"
+      ],
+      "charging": [
+        "󰢟", "󰂆", "󰂈", "󰂉", "󰂊", "󰂅"
+      ],
+      "plugged": "󰂅",
+    },
+    "max-length": 25
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": ["", "", ""],
+    "on-click": "pavucontrol",
+  },
   "custom/power": {
     "format": "⏻",
     "on-click": "wlogout"
@@ -81,9 +111,11 @@
     "orientation": "horizontal",
     "modules": [
       "mpris",
+      "battery",
       "bluetooth",
       "cpu",
       "memory",
+      "wireplumber",
       "tray",
       "custom/power"
     ]
