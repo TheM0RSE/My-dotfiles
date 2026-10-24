@@ -38,11 +38,13 @@
     "interval": 30,
     "format": " {}%",
     "max-length": 10,
+    "min-length": 6,
   },
   "memory": {
     "interval": 30,
     "format": " {}%",
-    "max-length": 10
+    "max-length": 10,
+    "min-length": 6,
   },
   "network": {
     "format": "{ifname}",
@@ -70,7 +72,7 @@
     "status-icons": {
       "paused": "⏸"
     },
-    // "ignored-players": ["firefox"]
+    "max-length": 30,
   },
   "battery": {
     "interval": 3,

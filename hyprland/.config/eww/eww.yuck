@@ -19,8 +19,6 @@
 
 (defwidget configure-waybar []
   (box :orientation "vertical"
-    :space-evenly false
-    :spacing 10
     :class "checkbox-container"
     (box :class "battery"
       (checkbox
@@ -49,14 +47,12 @@
 (defwindow configure-waybar
   :monitor 0
   :geometry (geometry 
-  :x "0%"
-  :y "10px"
-  :width "70%"
-  :height "70%"
-  :anchor "top center")
+  :x "30px"
+  :y "30px"
+  :width "500px"
+  :height "300px"
+  :anchor "top right")
 
   :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "dock"
   :wm-ingore false
   (configure-waybar))
