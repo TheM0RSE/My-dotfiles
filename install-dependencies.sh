@@ -17,7 +17,7 @@ else
   echo "yay installation complete"
 fi
 
-yay -S networkmanager network-manager-applet waybar hyprpolkitagent dunst hyprpaper waypaper wl-clipboard slurp wireplumber brightnessctl playerctl wlogout pavucontrol eww
+yay -S networkmanager network-manager-applet waybar hyprpolkitagent polkit-qt6 dunst hyprpaper waypaper wl-clipboard slurp wireplumber brightnessctl playerctl wlogout pavucontrol eww
 echo "Installation of my default apps (kitty, thunar, rofi, zen-browser-bin)..."
 echo "If you do not want them, make sure to change your preferred programs in modules/variables.lua."
 printf "Do you want to install my default apps? (y/n): "
